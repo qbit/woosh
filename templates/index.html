@@ -1,0 +1,34 @@
+{{ block "header" . }}
+<html>
+  <title>{{ .Title }}</title>
+  <body>
+{{ end }}
+    
+{{ block "footer" . }}
+  </body>
+</html>
+{{ end }}
+    
+{{ block "table" . }}
+<table>
+  <tr>
+    <thead>
+      <td>Thing</td>
+      <td>Stuff</td>
+    </thead>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+  </tr>
+</table>
+{{ end }}
+
+{{ block "index" . }}
+{{ template "header" . }}
+<p>Some stuff here..</p>
+<p>Some other stuff here</p>
+{{ template "table" . }}
+{{ template "footer" . }}
+{{ end }}
+
